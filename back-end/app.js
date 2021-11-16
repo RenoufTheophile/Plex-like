@@ -2,6 +2,8 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const sClick = require('./models/click');
+const fs= require('fs');
+var file = fs.readdirSync('/Media');
 
 // export one function that gets called once as the server is being initialized
 module.exports = function(app, server) {
@@ -12,7 +14,7 @@ module.exports = function(app, server) {
       useUnifiedTopology: true })
     .then(() => console.log('DB is OK'))
     .catch(() => console.log('DB failed'));
-    
+
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
@@ -39,4 +41,3 @@ app.get('/stats/all', (req, res, next) => {
     .catch(error => res.status(400).json({ error }));
   });
 }
-
