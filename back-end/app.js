@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const sClick = require('./models/click');
 const fs= require('fs');
-var file = fs.readdirSync('/Media');
+var file = fs.readdirSync('/home/renouf/Desktop/Plex-like/back-end/Media');
 
 // export one function that gets called once as the server is being initialized
 module.exports = function(app, server) {
@@ -37,7 +37,7 @@ app.use(function(req, res, next) {req.io = io; next(); });
 
 app.get('/stats/all', (req, res, next) => {
   sClick.find()
-    .then(clicks => res.status(200).json(clicks))
+    .then(clicks => res.status(200).json(file))
     .catch(error => res.status(400).json({ error }));
   });
 }
