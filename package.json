@@ -1,0 +1,19 @@
+{
+  "name": "plex-like",
+  "version": "1.0.0",
+  "description": "Applications en JavaScripts s'inscrivant dans la ligné de kodi ou plex",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RenoufTheophile/Plex-like.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RenoufTheophile/Plex-like/issues"
+  },
+  "homepage": "https://github.com/RenoufTheophile/Plex-like#readme"
+}
