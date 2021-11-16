@@ -8,6 +8,7 @@ app.set('port', port);
 // load app.js and let it do it's part of the initialization of app and server
 require('./app.js')(app, server);
 
+
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
